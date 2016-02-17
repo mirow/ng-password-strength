@@ -13,7 +13,7 @@
     .directive('ngPasswordStrength',
       function() {
         return {
-          template: '<div class="progress {{valueClass.outter}}"><div class="{{valueClass.inner}} {{innerClass}}" role="progressbar" aria-valuenow="{{value}}" aria-valuemin="0" aria-valuemax="100" ng-style="{width : ( value + \'%\' ) }"><span class="sr-only">{{value}}%</span></div></div>',
+          template: '<div class="progress {{valueClass.outter}}"><div class="{{valueClass.inner}} {{innerClass}}" role="progressbar" aria-valuenow="{{value}}" aria-valuemin="0" aria-valuemax="100" ng-style="{width : ( value + \'%\' ) }"><span>{{value}}%</span></div></div>',
           restrict: 'A',
           scope: {
             pwd: '=ngPasswordStrength',
@@ -180,8 +180,8 @@
                   case 0:
                   case 1:
                     return {
-                      inner: scope.outterClassPrefix + 'danger',
-                      outter: scope.innerClassPrefix + 'alert'
+                      outter: scope.outterClassPrefix + 'danger',
+                      inner: scope.innerClassPrefix + 'danger'
                     };
                   case 2:
                     return {
